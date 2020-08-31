@@ -31,6 +31,7 @@ main {
 .search-box {
   width: 100%;
   margin: 0 0 75px;
+  position: relative;
 }
 
 .search-box .search-bar {
@@ -65,6 +66,7 @@ main {
   font-weight: 500;
   text-align: center;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+  position: relative;
 }
 
 .location-box .date {
@@ -73,7 +75,14 @@ main {
   font-weight: 300;
   font-style: italic;
   text-align: center;
-  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+  position: relative;
+}
+
+.image {
+  position: fixed;
+  width: 10px;
+  transition: 0.4s ease;
 }
 
 .weather-box {

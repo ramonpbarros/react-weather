@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
+
 const api = {
   key:"b0105367c10a309df73fedf0f8b8f403",
   base:"https://api.openweathermap.org/data/2.5/"
 }
+const secret_key = "GBZIvsNHDMoO8ghj5neW-nOlNdZaCHtBdOBsJp7ZK_M"
 
 function App() {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
   const [forecast, setForecast] = useState({});
+  const [image, setImage] = useState({});
 
   const search = event => {
     if(event.key === "Enter") {
@@ -16,14 +19,19 @@ function App() {
         .then(result => {
           setWeather(result);
           setQuery('');
-          console.log(result)
         });
 
       fetch(`${api.base}forecast?q=${query}&units=imperial&APPID=${api.key}`)
         .then(res => res.json())
         .then(result => {
           setForecast(result);
-          console.log(result)
+        });
+
+      fetch(`https://api.unsplash.com/search/photos/?client_id=${secret_key}&orientation=portrait&query=${query}`)
+        .then(res => res.json())
+        .then(result => {
+          setImage(result);
+          console.log(result);
         });
     }
   }
@@ -47,6 +55,11 @@ function App() {
 
   return (
     <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 60) ? 'app warm': 'app') : 'app'}>
+          {(typeof image.results != "undefined") ? (
+            <div className="image">
+              <img src={image.results[1].urls.regular} alt=""></img>
+            </div>
+          ) : ('')}
       <main>
         <div className="search-box">
           <input 
@@ -77,7 +90,7 @@ function App() {
             <div className="forecast-box">
               <div className="forecast">
                 <div className="">{convertDate((forecast.list[2].dt_txt).split(" ")[0])}</div>
-                <img src={`https://openweathermap.org/img/wn/${forecast.list[2].weather[0].icon}.png`} alt="" id="imgForecast0"></img>
+                <img src={`https://openweathermap.org/img/wn/${forecast.list[2].weather[0].icon}.png`} alt=""></img>
                 <p>Temp: {Math.round(forecast.list[2].main.temp)}˚f</p>
                 <p>Humidity: {forecast.list[2].main.humidity}%</p>
               </div>  

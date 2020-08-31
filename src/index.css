@@ -81,6 +81,7 @@ main {
 
 .background{
   background-color: #000000;
+  opacity: 60%;
 }
 
 .background .image {

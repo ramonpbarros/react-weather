@@ -56,7 +56,7 @@ function App() {
   return (
     <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 100) ? 'app warm': 'app') : 'app'}>
           {(typeof image.results != "undefined") ? (
-            <div className="background">
+            <div className="background" style={{opacity: "60%"}}>
               <img src={image.results[1].urls.regular} alt="" className="image"></img>
             </div>
           ) : ('')}

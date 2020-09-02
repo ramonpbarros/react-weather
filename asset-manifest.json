@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-weather/static/css/main.65c50d91.chunk.css",
-    "main.js": "/react-weather/static/js/main.c879a4f7.chunk.js",
-    "main.js.map": "/react-weather/static/js/main.c879a4f7.chunk.js.map",
+    "main.js": "/react-weather/static/js/main.58364bea.chunk.js",
+    "main.js.map": "/react-weather/static/js/main.58364bea.chunk.js.map",
     "runtime-main.js": "/react-weather/static/js/runtime-main.6ddbaee8.js",
     "runtime-main.js.map": "/react-weather/static/js/runtime-main.6ddbaee8.js.map",
     "static/js/2.07144284.chunk.js": "/react-weather/static/js/2.07144284.chunk.js",
     "static/js/2.07144284.chunk.js.map": "/react-weather/static/js/2.07144284.chunk.js.map",
     "index.html": "/react-weather/index.html",
-    "precache-manifest.405b6f8598d9102e84b106d8493b90d3.js": "/react-weather/precache-manifest.405b6f8598d9102e84b106d8493b90d3.js",
+    "precache-manifest.884ffb2082be1d51cd439813534592c1.js": "/react-weather/precache-manifest.884ffb2082be1d51cd439813534592c1.js",
     "service-worker.js": "/react-weather/service-worker.js",
     "static/css/main.65c50d91.chunk.css.map": "/react-weather/static/css/main.65c50d91.chunk.css.map",
     "static/js/2.07144284.chunk.js.LICENSE.txt": "/react-weather/static/js/2.07144284.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.6ddbaee8.js",
     "static/js/2.07144284.chunk.js",
     "static/css/main.65c50d91.chunk.css",
-    "static/js/main.c879a4f7.chunk.js"
+    "static/js/main.58364bea.chunk.js"
   ]
 }

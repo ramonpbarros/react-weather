@@ -71,6 +71,7 @@ function App() {
             onKeyPress={search}
           />
         </div>
+        <h1>Welcome</h1>
         {(typeof weather.main != "undefined") ? (
           <div>
             <div className="location-box">
